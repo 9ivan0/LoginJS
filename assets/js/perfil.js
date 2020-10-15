@@ -1,10 +1,6 @@
 
-window.addEventListener("load", function(){
-  var coderObject = JSON.parse(localStorage.getItem("logueo"));
-  console.log(coderObject);
-  var spanCoderName = document.getElementById("coderName");
+const perfilusuario= document.getElementById("perfil");
 
-  spanCoderName.innerText = coderObject.nombre;
+let perfil= JSON.parse(localStorage.getItem('usuarioLista'));
 
-
-})
+perfilusuario.innerText= perfil.nombre;

@@ -71,6 +71,22 @@ p{
         border-radius: 2%;
     }
 }
+.importante {
+    background: #FDD1C5;
+    text-align: center;
+    border-top: 2px solid #FBAB95;
+    border-bottom: 2px solid #FBAB95;
+    color:#000000;
+     
+    }
+
+.container{
+    background: #fff;
+    width: 50%;
+    position: relative;
+    top: 150px;
+    left: 25%;
+}
 
 
 

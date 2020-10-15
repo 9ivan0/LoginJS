@@ -9,26 +9,26 @@
   <title>Regístrate</title>
 </head>
 <body>
-    <form id="signUpForm" class="formulario">
+    <form id="Nusuario" class="formulario">
       <h1>Registrate</h1>
      <div class="contenedor">
      
      <div class="input-contenedor">
          <i class="fas fa-users icon"></i>
-      <input type="text" id="name" placeholder="Ingresar Nombre Completo">
+      <input type="text" id="name" placeholder="Ingresar Nombre Completo" required>
     </div>
          
     <div class="input-contenedor">
     <i class="fas fa-user icon"></i>
-      <input type="text" placeholder="Ingresar Nombre de Usuario" id="usuario">
+      <input type="text" placeholder="Ingresar Nombre de Usuario" id="usuario" required>
     </div>
          
     <div class="input-contenedor">
     <i class="fas fa-key icon"></i>
-      <input type="password" placeholder="Ingresar Contraseña" id="pass">
+      <input type="password" placeholder="Ingresar Contraseña" id="pass" required>
     </div>
-      <span id="spanMessage"></span>
-      <button type="submit" id="signUpUser" class="button">Regístrate</button>
+    <center> <span class="importante" style="height: 200px;" id="spanMessage"></span></center><br>
+      <button type="submit" class="button">Regístrate</button>
       <p>¿Ya tienes una cuenta?<a class="link" href="login.html">Iniciar Sesion</a></p>
     </div>
     </form>

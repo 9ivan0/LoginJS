@@ -1,26 +1,29 @@
-function validateUser(user, usuario, password){
-  console.log(user);
-  console.log(user.usuario);
-  if(user.usuario == usuario && user.contrasena == password){
-    window.location.assign("perfil.html");
-  }else{
-    window.alert("Usuario o contraseña estan incorrectas");
-  }
-}
+const usuario= document.getElementById("usuario");
+const password= document.getElementById("password");
+const FormularioIn= document.getElementById("FormularioIn");
 
+let user= JSON.parse(localStorage.getItem('usuarioLista'));
 
-window.addEventListener("load", function(){
-  var userusuario = document.getElementById("inpusuario");
-  var userPass = document.getElementById("inpPass");
-  var form = document.getElementById("signInForm");
-  var btnSignIn = document.getElementById("btnLogIn");
+FormularioIn.addEventListener('submit',(event) => {
 
-  form.addEventListener("submit", function(){
-    event.preventDefault();
-  });
+	event.preventDefault();
+	let comprobar= null;
 
-  btnSignIn.addEventListener("click", function(){
-    var UserObject = JSON.parse(localStorage.getItem("logueo"));
-    validateUser(UserObject, userusuario.value, userPass.value, form, btnSignIn);
-  });
+	for (let i = 0; i<user.length; i++) {
+		if (user[i].user==usuario.value && user[i].pass==password.value) {
+			comprobar = user[i];
+		}
+	}
+
+	if (comprobar!=null) {
+
+		window.location="perfil.html";
+	}
+	else{
+		spanMessage.innerHTML = "El Usuario o la Contraseña estan incorrectos";
+	}
+	let ingreso= JSON.stringify(comprobar);
+	localStorage.setItem('usuarioLista',ingreso);
+
 });
+	
